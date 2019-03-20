@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\3rdpartylicenses.txt" />
+    <Content Remove="wwwroot\4.40cc714e392a794faa75.js" />
+    <Content Remove="wwwroot\favicon.ico" />
+    <Content Remove="wwwroot\index.html" />
+    <Content Remove="wwwroot\main.0de947c32f4a67ab12fb.js" />
+    <Content Remove="wwwroot\polyfills.e254f6b9bf511460eb6d.js" />
+    <Content Remove="wwwroot\runtime.348d50c429ae6ed5c9cc.js" />
+    <Content Remove="wwwroot\styles.3ff695c00d717f2d2a11.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\3rdpartylicenses.txt" />
+    <None Include="wwwroot\4.40cc714e392a794faa75.js" />
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\main.0de947c32f4a67ab12fb.js" />
+    <None Include="wwwroot\polyfills.e254f6b9bf511460eb6d.js" />
+    <None Include="wwwroot\runtime.348d50c429ae6ed5c9cc.js" />
+    <None Include="wwwroot\styles.3ff695c00d717f2d2a11.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

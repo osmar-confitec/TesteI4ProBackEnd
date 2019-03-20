@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Email.cs~RFa9f026.TMP" />
+    <None Remove="Pessoa.cs~RFfa1a88f.TMP" />
+    <None Remove="Repository\IPessoaRepository.cs~RF12c9aecf.TMP" />
+    <None Remove="Telefone.cs~RFaa87b3.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contatos.Notificacoes\Contatos.Notificacoes.csproj" />
+    <ProjectReference Include="..\Contatos.ViewModel\Contatos.ViewModel.csproj" />
+  </ItemGroup>
+
+</Project>

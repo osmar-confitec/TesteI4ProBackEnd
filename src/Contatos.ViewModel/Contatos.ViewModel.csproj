@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EmailViewModel.cs~RF99f479.TMP" />
+    <None Remove="PessoaConsultaViewModel.cs~RF12f20345.TMP" />
+    <None Remove="TelefoneViewModel.cs~RF12ed4306.TMP" />
+  </ItemGroup>
+
+</Project>
