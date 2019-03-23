@@ -15,6 +15,7 @@ namespace Contatos.Data.Context
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<Email> Emails { get; set; }
         public DbSet<Telefone> Telefones { get; set; }
+        public IConfiguration Configuration { get; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,6 +26,11 @@ namespace Contatos.Data.Context
             base.OnModelCreating(modelBuilder);
         }
 
+        public Contexto(IConfiguration _Configuration)
+        {
+            Configuration = _Configuration;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var config = new ConfigurationBuilder()
@@ -32,7 +38,7 @@ namespace Contatos.Data.Context
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+            optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
         }
     }
 }
