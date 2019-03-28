@@ -26,6 +26,7 @@ namespace Contatos.Data.Context
             base.OnModelCreating(modelBuilder);
         }
 
+        //Comentar esse contructor para atualizar a base
         public Contexto(IConfiguration _Configuration)
         {
             Configuration = _Configuration;
@@ -37,6 +38,9 @@ namespace Contatos.Data.Context
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
+
+            //decomentar essa linha para atualizar a base
+            // optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
 
             optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
         }

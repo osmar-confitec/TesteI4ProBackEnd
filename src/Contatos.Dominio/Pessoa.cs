@@ -10,6 +10,8 @@ namespace Contatos.Dominio
 
         public Guid Id { get;  set; }
 
+        public bool Preferencial { get; set; }
+
         public string Email { get;  set; }
 
         public string Telefone { get;  set; }
